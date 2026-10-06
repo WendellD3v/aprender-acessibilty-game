@@ -1,0 +1,67 @@
+section#menu-jogar{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    background-image: url('../../../../assets/images/Jogar/menu/menu-background.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .nav-menu{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 31px;
+        
+        .header{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 21px;
+
+            h1{
+                text-align: center;
+                font-size: 101px;
+                font-width: 700;
+                color: #14086E;
+
+                span{
+                    color: #055884;
+                }
+            }
+
+            h2{
+                text-align: center;
+                font-weight: 400;
+                font-size: 36px;
+                max-width: 580px;
+            }
+        }
+
+        button.jogar{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            width: 385px;
+            height: 78px;
+            border: none;
+            border-radius: 20px;
+            background-color: #07FD7A;
+
+            h1{
+                color: #FFFFFF;
+                font-weight: 700;
+            }
+        }
+
+        button.jogar:hover{
+            cursor: pointer;
+        }
+    }
+}

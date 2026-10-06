@@ -1,0 +1,9 @@
+section#Jogar{
+    img#logo{
+        position: fixed;
+        top: 5px;
+        right: 10px;
+        width: 133px;
+        height: 64px;
+    }
+}
