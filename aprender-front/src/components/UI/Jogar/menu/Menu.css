@@ -9,13 +9,12 @@ section#menu-jogar{
     background-size: cover;
 
     .nav-menu{
-        width: 100%;
-        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 31px;
+        padding-top: 100px;
         
         .header{
             display: flex;
@@ -24,21 +23,14 @@ section#menu-jogar{
             justify-content: center;
             gap: 21px;
 
-            h1{
-                text-align: center;
-                font-size: 101px;
-                font-width: 700;
-                color: #14086E;
-
-                span{
-                    color: #055884;
-                }
+            img{
+                width: 40vh;
             }
 
-            h2{
+            h1{
                 text-align: center;
                 font-weight: 400;
-                font-size: 36px;
+                font-size: 15px;
                 max-width: 580px;
             }
         }
@@ -47,21 +39,35 @@ section#menu-jogar{
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 20px;
-            width: 385px;
-            height: 78px;
+            gap: 30px;
             border: none;
             border-radius: 20px;
             background-color: #07FD7A;
+            padding: 2px 30px;
 
             h1{
                 color: #FFFFFF;
                 font-weight: 700;
+                font-size: 20px;
+            }
+
+            .icon{
+                display: flex;
+                width: 35px;
             }
         }
 
         button.jogar:hover{
             cursor: pointer;
+        }
+    }
+
+    .avatar{
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        img{
+            width: 35vh;
         }
     }
 }

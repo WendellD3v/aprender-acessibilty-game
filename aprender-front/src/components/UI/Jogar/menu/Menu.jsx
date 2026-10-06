@@ -2,13 +2,17 @@
 import './Menu.css';
 import 'animate.css';
 
+// Assets
+import Aprender from '../../../../assets/images/aprender.png'
+import Avatar from '../../../../assets/images/Jogar/menu/Avatar.png'
+
 export default function Menu({changeScreen}) {
     return (
         <section id='menu-jogar'>
             <div className="nav-menu">
                 <div className="header animate__animated animate__bounceInDown">    
-                    <h1>Aprender<br />é <span>para todos</span></h1>
-                    <h2>Um jogo educativo e inclusivo para estimular o aprendizado de forma divertida</h2>
+                    <img src={Aprender} alt="Aprender Logo" />
+                    <h1>Um jogo educativo e inclusivo para estimular o aprendizado de forma divertida</h1>
                 </div>
                 <button className='jogar animate__animated animate__bounceIn'>
                     <div className="icon">
@@ -18,6 +22,10 @@ export default function Menu({changeScreen}) {
                     </div>
                     <h1>Jogar</h1>
                 </button>
+            </div>
+
+            <div className="avatar">
+                <img src={Avatar} alt="Avatar" />
             </div>
         </section>
     )
