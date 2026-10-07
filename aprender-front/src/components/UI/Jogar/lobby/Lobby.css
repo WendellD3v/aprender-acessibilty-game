@@ -1,0 +1,10 @@
+section#lobby-jogar{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    background-image: url('../../../../assets/images/Jogar/menu/menu-background.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
