@@ -5,7 +5,7 @@ import './Lobby.css'
 import Navbar from '../../../Util/Jogar/Nav/Navbar'
 
 // Assets
-import Avatar from '../../../../assets/images/Jogar/menu/Avatar.png'
+import Avatar from '../../../../assets/images/Jogar/menu/avatar.png'
 
 import MemoryGame from '../../../../assets/images/Jogar/games/memory.png'
 import ImagesGame from '../../../../assets/images/Jogar/games/images.png'
