@@ -1,0 +1,34 @@
+section#MemoryGame{
+    background-image: url('../../../assets/images/Jogar/menu/menu-background.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .background{
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+
+        background-color: rgba(0, 0, 0, 0.8);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .content{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .cards-grid{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 25px 13px;
+            }
+        }
+    }
+}
