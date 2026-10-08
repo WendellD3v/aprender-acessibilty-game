@@ -3,7 +3,7 @@ import './Menu.css';
 
 // Assets
 import Aprender from '../../../../assets/images/aprender.png'
-import Avatar from '../../../../assets/images/Jogar/menu/Avatar.png'
+import Avatar from '../../../../assets/images/Jogar/menu/avatar.png'
 
 export default function Menu({changeScreen}) {
     return (
