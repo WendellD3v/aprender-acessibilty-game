@@ -44,9 +44,9 @@ O projeto está em sua fase inicial. Neste momento, o foco está na construção
 
 ### Roadmap inicial
 
-* [ ] Definir mecânicas principais
+* [x] Definir mecânicas principais
 * [ ] Criar a primeira versão jogável
-* [ ] Desenvolver sistema de atividades
+* [x] Desenvolver sistema de atividades
 * [ ] Criar sistema de progressão
 * [ ] Implementar configurações de acessibilidade
 * [ ] Adicionar recursos de áudio
