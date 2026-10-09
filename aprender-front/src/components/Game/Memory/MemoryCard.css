@@ -2,6 +2,8 @@ section#MemoryCard{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+
     .showingCard{
         background-color: #FFFFFF;
         display: flex;
