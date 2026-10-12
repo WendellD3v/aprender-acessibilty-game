@@ -1,0 +1,15 @@
+{
+    "questions": [
+        {
+            "Question": "Qual o nome desse animal?",
+            "Icon": "/games/images/coelho.png",
+            "options": [
+                "Cachorro",
+                "Gato",
+                "Coelho",
+                "Piriquito"
+            ],
+            "correctAnswer": ["Coelho", "Coelha", "Coelhinha", "Coelhinho"]
+        }
+    ]
+}
