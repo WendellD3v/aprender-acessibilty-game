@@ -1,4 +1,8 @@
 section#menu-jogar{
+
+    position: relative;
+    isolation: isolate;
+
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -9,6 +13,8 @@ section#menu-jogar{
     background-size: cover;
 
     .nav-menu{
+        position: relative;
+        z-index: 2;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -63,11 +69,12 @@ section#menu-jogar{
     }
 
     .avatar{
+        z-index: 1;
         position: fixed;
         bottom: 0px;
         left: 0px;
         img{
-            width: 35vh;
+            width: 30vh;
         }
     }
 }
