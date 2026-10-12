@@ -9,7 +9,7 @@
                 "Cachorro",
                 "Gato",
                 "Coelho",
-                "Piriquito"
+                "Periquito"
             ],
             "correctAnswer": ["Coelho", "Coelha", "Coelhinha", "Coelhinho"]
         },
@@ -21,7 +21,7 @@
                 "Cachorro",
                 "Gato",
                 "Coelho",
-                "Piriquito"
+                "Periquito"
             ],
             "correctAnswer": ["Cachorro", "Cachorra", "Cachorrinho", "Cachorrinha"]
         }

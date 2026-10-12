@@ -47,6 +47,115 @@ export default function ImagesGame({changeScreen}){
         setPerguntasPartida(perguntas.slice(0, 10));
     }, []);
 
+
+    // Voice
+    function verificarResposta(texto) {
+        const perguntaAtual = perguntasPartida[atualQuestion];
+
+        if (!perguntaAtual || isLocked || !texto.trim()) return;
+
+        const normalizar = (valor) =>
+            valor
+                .toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .replace(/[^\w\s]/g, "")
+                .trim();
+
+        const respostaFalada = normalizar(texto);
+
+        // Verifica se a fala corresponde a alguma opção
+        const opcaoSelecionada = perguntaAtual.options.find((opcao) => {
+            return respostaFalada === normalizar(opcao);
+        });
+
+        // Se não corresponde a nenhuma opção, não avança
+        if (!opcaoSelecionada) {
+            console.log("Resposta não encontrada nas opções:", texto);
+            return;
+        }
+
+        // Verifica se a opção selecionada é correta
+        const acertou = perguntaAtual.correctAnswer.some(
+            (resposta) =>
+                normalizar(resposta) === normalizar(opcaoSelecionada)
+        );
+
+        // Marca a opção falada, seja ela correta ou incorreta
+        setSelectedAnswer(opcaoSelecionada);
+        setIsLocked(true);
+
+        // Contabiliza somente se acertar
+        if (acertou) {
+            setCorrectCount((count) => count + 1);
+        }
+
+        // Avança após 1 segundo
+        setTimeout(() => {
+            if (atualQuestion < perguntasPartida.length - 1) {
+                setAtualQuestion((atual) => atual + 1);
+                setSelectedAnswer(null);
+                setIsLocked(false);
+            } else {
+                setHasWon(true);
+            }
+        }, 1000);
+    }
+
+
+    function iniciarReconhecimento() {
+        const SpeechRecognition =
+        window.SpeechRecognition ||
+        window.webkitSpeechRecognition;
+
+        if (!SpeechRecognition) {
+        alert("Seu navegador não suporta reconhecimento de voz.");
+        console.log("Seu navegador não suporta reconhecimento de voz.")
+        return;
+        }
+        console.log('passou')
+        const reconhecimento = new SpeechRecognition();
+
+        reconhecimento.lang = "pt-BR";
+        reconhecimento.continuous = false;
+        reconhecimento.interimResults = true;
+
+        reconhecimento.onresult = (event) => {
+            let resultado = "";
+
+            for (let i = 0; i < event.results.length; i++) {
+                resultado += event.results[i][0].transcript + " ";
+            }
+
+            // Verifica quando a fala estiver completa
+            const ultimoResultado = event.results[event.results.length - 1];
+
+            if (ultimoResultado.isFinal) {
+                verificarResposta(resultado);
+            }
+        };
+
+        reconhecimento.onstart = () => setMicrophoneStatus(true);
+        reconhecimento.onend = () => {
+            setMicrophoneStatus(false)
+        };
+
+        reconhecimento.onerror = (event) => {
+        console.error("Erro no reconhecimento:", event.error);
+        setMicrophoneStatus(false);
+        };
+
+        reconhecimento.start();
+
+        window.reconhecimentoVoz = reconhecimento;
+    }
+
+    function pararReconhecimento() {
+        window.reconhecimentoVoz?.stop();
+        setMicrophoneStatus(false);
+    }
+
+
     function restartGame(){
         const perguntas = [...imagesConfig.questions];
 
@@ -202,12 +311,12 @@ export default function ImagesGame({changeScreen}){
                                     {microphoneStatus ? (
                                         <>
                                             <h1 className='talking'>Escutando sua resposta...</h1>
-                                            <img onClick={() => setMicrophoneStatus(false)} src={talkingIcon} alt="Falando" />
+                                            <img onClick={() => pararReconhecimento()} src={talkingIcon} alt="Falando" />
                                         </>
                                     ): (
                                         <>
                                             <h1>Pressione para falar sua resposta</h1>
-                                            <img onClick={() => setMicrophoneStatus(true)} src={mutedIcon} alt="Mutado" />
+                                            <img onClick={() => iniciarReconhecimento()} src={mutedIcon} alt="Mutado" />
                                         </>
                                     )}
                                 </div>

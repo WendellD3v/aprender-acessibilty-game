@@ -178,13 +178,7 @@ section#ImagesGame{
                         font-size: 15px;
                         color: #FFFFFF;
                     }
-                }
-
-                button.jogar-novamente:hover{
-                    background-color: rgba(0, 0, 0, 1);
-                }
-
-                
+                }                
             }
         }
 

@@ -4,7 +4,6 @@ import { useEffect, useState } from "react"
 import Menu from "../../components/UI/Jogar/menu/Menu.jsx";
 import Lobby from "../../components/UI/Jogar/lobby/Lobby.jsx";
 import MemoryGame from "../../components/Game/Memory/MemoryGame.jsx";
-import SpeechToText from "../../components/Util/Speech-To-Text/SpeechToText.jsx";
 import Browser from "../../components/Util/Jogar/Browser/Browser.jsx";
 import ImagesGame from "../../components/Game/Images/ImagesGame.jsx";
 
@@ -46,8 +45,6 @@ export default function Jogar() {
                 <MemoryGame changeScreen={(screen) => {setPage(screen)}}/>
             ) : page == 'ImagesGame' ? (
                 <ImagesGame changeScreen={(screen) => {setPage(screen)}}/>
-            ) : page == 'Teste' ?(
-                <SpeechToText/>
             ) : null}
 
             
