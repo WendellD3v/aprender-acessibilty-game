@@ -12,7 +12,7 @@ import './Jogar.css';
 
 export default function Jogar() {
 
-    const [page, setPage] = useState('ImagesGame');
+    const [page, setPage] = useState('menu');
     const [navAlert, setNavAlert] = useState(false)
 
     useEffect(() => {
