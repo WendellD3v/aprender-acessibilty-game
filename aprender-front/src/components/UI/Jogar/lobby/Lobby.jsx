@@ -30,7 +30,9 @@ export default function Lobby({changeScreen}){
                     <h1>Memória e atenção</h1>
                 </div>
 
-                <div className="game animate__animated animate__flipInX">
+                <div className="game animate__animated animate__flipInX" onClick={() => {
+                    changeScreen('ImagesGame')
+                }}>
                     <img src={ImagesGameIcon} alt="" />
                     <h1>Assosiação de imagens</h1>
                 </div>
