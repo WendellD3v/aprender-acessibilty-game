@@ -10,6 +10,18 @@
                 "Piriquito"
             ],
             "correctAnswer": ["Coelho", "Coelha", "Coelhinha", "Coelhinho"]
+        },
+
+        {
+            "Question": "Qual o nome desse animal?",
+            "Icon": "/games/images/cachorro.png",
+            "options": [
+                "Cachorro",
+                "Gato",
+                "Coelho",
+                "Piriquito"
+            ],
+            "correctAnswer": ["Cachorro", "Cachorra", "Cachorrinho", "Cachorrinha"]
         }
     ]
 }
