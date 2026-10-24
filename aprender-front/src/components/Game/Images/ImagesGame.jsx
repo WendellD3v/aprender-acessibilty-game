@@ -16,6 +16,9 @@ import talkingIcon from '../../../assets/images/microphone.png'
 import Progress from '../../../assets/images/Jogar/games/progress.png';
 import Avatar from '../../../assets/images/Jogar/menu/avatar.png'
 
+// Services
+import { givePlayerPoints } from '../../../hooks/points';
+
 
 export default function ImagesGame({playerData, changeScreen}){
 
@@ -86,7 +89,9 @@ export default function ImagesGame({playerData, changeScreen}){
         setIsLocked(true);
 
         // Contabiliza somente se acertar
+        var count = correctCount
         if (acertou) {
+            count += 1
             setCorrectCount((count) => count + 1);
         }
 
@@ -98,6 +103,7 @@ export default function ImagesGame({playerData, changeScreen}){
                 setIsLocked(false);
             } else {
                 setHasWon(true);
+                givePlayerPoints((imagesConfig['points-of-answer'] * count));
             }
         }, 1000);
     }
@@ -113,7 +119,6 @@ export default function ImagesGame({playerData, changeScreen}){
         console.log("Seu navegador não suporta reconhecimento de voz.")
         return;
         }
-        console.log('passou')
         const reconhecimento = new SpeechRecognition();
 
         reconhecimento.lang = "pt-BR";
@@ -259,7 +264,7 @@ export default function ImagesGame({playerData, changeScreen}){
                     <>
                         {perguntasPartida.length > 0 && (
                             <>
-                                <Navbar changeScreen = {(screen) => {
+                                <Navbar playerData={playerData} changeScreen = {(screen) => {
                                     changeScreen(screen)
                                 }}/>
                                 <div className="content">
@@ -283,7 +288,9 @@ export default function ImagesGame({playerData, changeScreen}){
                                                             setSelectedAnswer(value);
                                                             setIsLocked(true);
 
+                                                            var count = correctCount
                                                             if (isCorrect) {
+                                                                count += 1
                                                                 setCorrectCount((count) => count + 1);
                                                             }
 
@@ -295,6 +302,7 @@ export default function ImagesGame({playerData, changeScreen}){
                                                                     console.log('Atualizado a Page')
                                                                 } else{
                                                                     setHasWon(true)
+                                                                    givePlayerPoints((imagesConfig['points-of-answer'] * count));
                                                                 }
                                                             }, 1000)
                                                         }
