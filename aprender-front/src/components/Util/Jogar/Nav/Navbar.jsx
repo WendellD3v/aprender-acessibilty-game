@@ -4,7 +4,7 @@ import './Navbar.css';
 // Assets 
 import avatar1 from '../../../../assets/images/avatars/1.png';
 
-export default function Navbar({changeScreen}) {
+export default function Navbar({playerData, changeScreen}) {
     return (
         <nav id="Jogar-Nav" className='animate__animated animate__flipInX'>
             <div className="return-button">
@@ -20,13 +20,13 @@ export default function Navbar({changeScreen}) {
             <div className="perfil">
                 <div className="infos">
                     <div className="name">
-                        <h1>Livia Beatriz</h1>
+                        <h1>{playerData.name}</h1>
                     </div>
                     <div className="ranking">
                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8.8682 3.44825L6.38871 3.08789L5.28031 0.840824C5.25003 0.7793 5.20023 0.729496 5.13871 0.699222C4.98441 0.62305 4.79691 0.686527 4.71976 0.840824L3.61136 3.08789L1.13187 3.44825C1.06351 3.45801 1.00101 3.49024 0.953159 3.53907C0.895309 3.59853 0.863431 3.67852 0.864529 3.76147C0.865628 3.84442 0.899614 3.92354 0.959018 3.98145L2.75296 5.73047L2.32914 8.2002C2.3192 8.25765 2.32555 8.31674 2.34749 8.37076C2.36942 8.42478 2.40605 8.47158 2.45323 8.50584C2.5004 8.5401 2.55623 8.56046 2.61439 8.56461C2.67255 8.56876 2.7307 8.55652 2.78226 8.5293L5.00003 7.36328L7.21781 8.5293C7.27835 8.56153 7.34867 8.57227 7.41605 8.56055C7.58597 8.53125 7.70023 8.37012 7.67093 8.2002L7.2471 5.73047L9.04105 3.98145C9.08988 3.9336 9.1221 3.8711 9.13187 3.80274C9.15824 3.63184 9.0391 3.47364 8.8682 3.44825Z" fill="#F7FF0B"/>
                         </svg>
-                        <p>10</p>
+                        <p>{playerData.points}</p>
                     </div>
                 </div>
 

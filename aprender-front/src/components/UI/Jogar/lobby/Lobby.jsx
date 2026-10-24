@@ -14,11 +14,11 @@ import NumerosGameIcon from '../../../../assets/images/Jogar/games/numeros.png'
 import JuntosGameIcon from '../../../../assets/images/Jogar/games/juntos.png'
 import Progress from '../../../../assets/images/Jogar/games/progress.png'
 
-export default function Lobby({changeScreen}){
+export default function Lobby({playerData, changeScreen}){
     return (
         <section id='lobby-jogar'>
 
-            <Navbar changeScreen = {(screen) => {
+            <Navbar playerData={playerData} changeScreen = {(screen) => {
                 changeScreen(screen)
             }}/>
 

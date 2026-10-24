@@ -17,7 +17,7 @@ import Progress from '../../../assets/images/Jogar/games/progress.png';
 import Avatar from '../../../assets/images/Jogar/menu/avatar.png'
 
 
-export default function ImagesGame({changeScreen}){
+export default function ImagesGame({playerData, changeScreen}){
 
     const [microphoneStatus, setMicrophoneStatus] = useState(false)
     const [perguntasPartida, setPerguntasPartida] = useState([]);
@@ -185,7 +185,7 @@ export default function ImagesGame({changeScreen}){
             <div className="background">
                 {inTutorial ? (
                     <>
-                        <Navbar changeScreen = {(screen) => {
+                        <Navbar playerData={playerData} changeScreen = {(screen) => {
                             changeScreen(screen)
                         }}/>
 

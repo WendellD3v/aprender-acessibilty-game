@@ -7,11 +7,15 @@ import MemoryGame from "../../components/Game/Memory/MemoryGame.jsx";
 import Browser from "../../components/Util/Jogar/Browser/Browser.jsx";
 import ImagesGame from "../../components/Game/Images/ImagesGame.jsx";
 
+// Service
+import { getPlayerPoints, getPlayer } from "../../hooks/points.js";
+
 // Style
 import './Jogar.css';
 
 export default function Jogar() {
 
+    const [playerdata, setPlayerData] = useState(getPlayerPoints());
     const [page, setPage] = useState('menu');
     const [navAlert, setNavAlert] = useState(false)
 
@@ -30,6 +34,10 @@ export default function Jogar() {
         setNavAlert(false);
     }, []);
 
+    function updatePlayerData(){
+        return setPlayerData(getPlayer())
+    }
+
     return (
         <section id="Jogar">      
 
@@ -38,16 +46,26 @@ export default function Jogar() {
             )}     
 
             {page == 'menu' ? (
-                <Menu changeScreen={(screen) => {setPage(screen)}} />
+                <Menu playerData={playerdata} changeScreen={(screen) => {
+                    setPage(screen)
+                    updatePlayerData()
+                }} />
             ) : page == 'lobby' ? (
-                <Lobby changeScreen={(screen) => {setPage(screen)}} />
+                <Lobby playerData={playerdata} changeScreen={(screen) => {
+                    setPage(screen)
+                    updatePlayerData()
+                }} />
             ) : page == 'MemoryGame' ?(
-                <MemoryGame changeScreen={(screen) => {setPage(screen)}}/>
+                <MemoryGame playerData={playerdata} changeScreen={(screen) => {
+                    setPage(screen)
+                    updatePlayerData()
+                }}/>
             ) : page == 'ImagesGame' ? (
-                <ImagesGame changeScreen={(screen) => {setPage(screen)}}/>
+                <ImagesGame playerData={playerdata} changeScreen={(screen) => {
+                    setPage(screen)
+                    updatePlayerData()
+                }}/>
             ) : null}
-
-            
 
         </section>
     )

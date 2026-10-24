@@ -9,8 +9,9 @@ import './MemoryGame.css';
 // Assets
 import Progress from '../../../assets/images/Jogar/games/progress.png';
 import Avatar from '../../../assets/images/Jogar/menu/avatar.png'
+import { givePlayerPoints } from "../../../hooks/points";
 
-export default function MemoryGame({changeScreen}){
+export default function MemoryGame({playerData, changeScreen}){
 
     // Cartas
     const defaultCards = [
@@ -109,6 +110,7 @@ export default function MemoryGame({changeScreen}){
 
                     if (updatedCards.length === cards.length / 2){
                         setHasWon(true)
+                        givePlayerPoints(30)
                     }
 
                     return updatedCards
@@ -127,7 +129,7 @@ export default function MemoryGame({changeScreen}){
             <div className="background">
                 {inTutorial ? (
                     <>
-                        <Navbar changeScreen = {(screen) => {
+                        <Navbar playerData={playerData} changeScreen = {(screen) => {
                             changeScreen(screen)
                         }}/>
 
@@ -180,7 +182,7 @@ export default function MemoryGame({changeScreen}){
                     </>
                 ) : (
                     <>
-                        <Navbar changeScreen = {(screen) => {
+                        <Navbar playerData={playerData} changeScreen = {(screen) => {
                             changeScreen(screen)
                         }}/>
 

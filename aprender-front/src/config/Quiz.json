@@ -1,0 +1,106 @@
+{
+  "points-of-answer": 10,
+  "count-questions": 10,
+  "questions": [
+    {
+        "Question": "Qual é o planeta em que vivemos?",
+        "options": [
+            "Marte",
+            "Terra",
+            "Júpiter",
+            "Vênus"
+        ],
+        "correctAnswer": ["Terra"]
+    },
+    {
+        "Question": "Quantos dias tem uma semana?",
+        "options": [
+            "Cinco",
+            "Seis",
+            "Sete",
+            "Oito"
+        ],
+        "correctAnswer": ["Sete"]
+    },
+    {
+        "Question": "Qual animal é conhecido como o rei da selva?",
+        "options": [
+            "Elefante",
+            "Tigre",
+            "Leão",
+            "Girafa"
+        ],
+        "correctAnswer": ["Leão", "Leao"]
+    },
+    {
+        "Question": "Qual cor resulta da mistura de azul com amarelo?",
+        "options": [
+            "Verde",
+            "Roxo",
+            "Laranja",
+            "Rosa"
+        ],
+        "correctAnswer": ["Verde"]
+    },
+    {
+        "Question": "Quantas patas tem uma aranha?",
+        "options": [
+            "Quatro",
+            "Seis",
+            "Oito",
+            "Dez"
+        ],
+        "correctAnswer": ["Oito"]
+    },
+    {
+        "Question": "Qual é o maior planeta do Sistema Solar?",
+        "options": [
+            "Terra",
+            "Saturno",
+            "Netuno",
+            "Júpiter"
+        ],
+        "correctAnswer": ["Júpiter", "Jupiter"]
+    },
+    {
+        "Question": "Qual é o satélite natural da Terra?",
+        "options": [
+            "Sol",
+            "Lua",
+            "Marte",
+            "Estrela Polar"
+        ],
+        "correctAnswer": ["Lua"]
+    },
+    {
+        "Question": "Quantos meses tem um ano?",
+        "options": [
+            "Dez",
+            "Onze",
+            "Doze",
+            "Treze"
+        ],
+        "correctAnswer": ["Doze"]
+    },
+    {
+        "Question": "Qual destes animais respira por brânquias?",
+        "options": [
+            "Cachorro",
+            "Gato",
+            "Peixe",
+            "Galinha"
+        ],
+        "correctAnswer": ["Peixe"]
+    },
+    {
+        "Question": "Qual é o país em que vivemos?",
+        "options": [
+            "Argentina",
+            "Portugal",
+            "Brasil",
+            "Chile"
+        ],
+        "correctAnswer": ["Brasil"]
+    }
+  ]
+}
