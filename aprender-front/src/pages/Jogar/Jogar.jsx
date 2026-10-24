@@ -17,7 +17,7 @@ import './Jogar.css';
 export default function Jogar() {
 
     const [playerdata, setPlayerData] = useState(getPlayer());
-    const [page, setPage] = useState('Ranking');
+    const [page, setPage] = useState('menu');
     const [navAlert, setNavAlert] = useState(false)
 
     useEffect(() => {

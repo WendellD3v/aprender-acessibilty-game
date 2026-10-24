@@ -9,11 +9,15 @@
                 "Cachorro",
                 "Gato",
                 "Coelho",
-                "Periquito"
+                "Galinha"
             ],
-            "correctAnswer": ["Coelho", "Coelha", "Coelhinha", "Coelhinho"]
+            "correctAnswer": [
+                "Coelho",
+                "Coelha",
+                "Coelhinha",
+                "Coelhinho"
+            ]
         },
-
         {
             "Question": "Qual o nome desse animal?",
             "Icon": "/games/images/cachorro.png",
@@ -21,9 +25,106 @@
                 "Cachorro",
                 "Gato",
                 "Coelho",
-                "Periquito"
+                "Galinha"
             ],
-            "correctAnswer": ["Cachorro", "Cachorra", "Cachorrinho", "Cachorrinha"]
+            "correctAnswer": [
+                "Cachorro",
+                "Cachorra",
+                "Cachorrinho",
+                "Cachorrinha"
+            ]
+        },
+        {
+            "Question": "Qual o nome desse animal?",
+            "Icon": "/games/images/gato.png",
+            "options": [
+                "Cachorro",
+                "Gato",
+                "Coelho",
+                "Galinha"
+            ],
+            "correctAnswer": [
+                "Gato",
+                "Gata",
+                "Gatinho",
+                "Gatinha"
+            ]
+        },
+        {
+            "Question": "Qual o nome desse animal?",
+            "Icon": "/games/images/galinha.png",
+            "options": [
+                "Cachorro",
+                "Gato",
+                "Galinha",
+                "Papagaio"
+            ],
+            "correctAnswer": [
+                "Galinha",
+                "Galo",
+                "Pintinho"
+            ]
+        },
+        {
+            "Question": "Qual o nome desse animal?",
+            "Icon": "/games/images/leao.png",
+            "options": [
+                "Leão",
+                "Porco",
+                "Rato",
+                "Papagaio"
+            ],
+            "correctAnswer": [
+                "Leão",
+                "Leoa",
+                "Leãozinho"
+            ]
+        },
+        {
+            "Question": "Qual o nome desse animal?",
+            "Icon": "/games/images/papagaio.png",
+            "options": [
+                "Cachorro",
+                "Papagaio",
+                "Gato",
+                "Rato"
+            ],
+            "correctAnswer": [
+                "Papagaio",
+                "Papagaia"
+            ]
+        },
+        {
+            "Question": "Qual o nome desse animal?",
+            "Icon": "/games/images/porco.png",
+            "options": [
+                "Porco",
+                "Leão",
+                "Galinha",
+                "Cachorro"
+            ],
+            "correctAnswer": [
+                "Porco",
+                "Porca",
+                "Porquinho",
+                "Porquinha"
+            ]
+        },
+        {
+            "Question": "Qual o nome desse animal?",
+            "Icon": "/games/images/rato.png",
+            "options": [
+                "Rato",
+                "Gato",
+                "Coelho",
+                "Papagaio"
+            ],
+            "correctAnswer": [
+                "Rato",
+                "Rata",
+                "Ratinho",
+                "Ratinha"
+            ]
         }
     ]
 }
