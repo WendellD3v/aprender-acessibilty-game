@@ -1,4 +1,4 @@
-section#ranking-section{
+section#ranking-section {
     background-image: url('../../../assets/images/Jogar/menu/menu-background.png');
     background-position: bottom;
     background-repeat: no-repeat;
@@ -7,66 +7,108 @@ section#ranking-section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    height: 100vh;
 
-    div.content{
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+
+    div.content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
+
         width: 100%;
         height: 100%;
-        padding: 10px 10px;
+        min-height: 0;
+        padding: 10px;
         position: relative;
         gap: 10px;
+        box-sizing: border-box;
 
-        .ranking-container{
+        .ranking-container {
             width: 100%;
-            height: 100%;
+            flex: 1;
+            min-height: 0;
+            min-width: 0;
+
             display: flex;
             flex-direction: column;
-            align-content: center;
+            align-items: center;
             gap: 5px;
 
+            overflow-y: auto;
+            overflow-x: hidden;
+            overscroll-behavior: contain;
 
-            .ranking{
+            /* Barra de rolagem */
+            scrollbar-width: thin;
+            scrollbar-color: #888888 transparent;
+
+            &::-webkit-scrollbar {
+                width: 6px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #888888;
+                border-radius: 10px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: transparent;
+            }
+
+            .ranking {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+
                 background-color: #FFFFFF;
                 border-radius: 10px;
+
                 width: 100%;
                 padding: 10px 20px;
+                box-sizing: border-box;
+                flex-shrink: 0;
 
-                .user{
+                .user {
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     gap: 5px;
-                    .icon img{
+                    min-width: 0;
+
+                    .icon img {
                         width: 3vh;
                     }
 
-                    .user-info{
-                        h1{
+                    .user-info {
+                        min-width: 0;
+
+                        h1 {
                             color: #017397;
                             font-size: 12px;
                         }
-                        p{
+
+                        p {
                             color: #017397;
                             font-size: 10px;
                             font-weight: 400;
-                            span{
+
+                            span {
                                 font-family: sans-serif;
                             }
                         }
                     }
                 }
 
-                .position{
+                .position {
                     background-color: #FFFFFF;
-                    h1{
+                    flex-shrink: 0;
+
+                    h1 {
                         font-family: sans-serif;
                         color: #017397;
                         font-size: 3vh;
@@ -75,41 +117,46 @@ section#ranking-section{
             }
         }
 
-        .your-rank{
-            bottom: 0px;
-
+        .your-rank {
             display: flex;
-            background-color: #ffffff;
+            align-items: center;
+
+            background-color: #FFFFFF;
             border-radius: 10px;
-            
+
             width: 100%;
             padding: 10px 20px;
-
             gap: 10px;
+            box-sizing: border-box;
+            flex-shrink: 0;
 
-            .icon img{
+            .icon img {
                 width: 7vh;
             }
 
-            .user-info{
+            .user-info {
                 display: flex;
                 flex-direction: column;
-                align-items: left;
+                align-items: flex-start;
                 justify-content: center;
                 gap: 5px;
-                h1{
+                min-width: 0;
+
+                h1 {
                     font-size: 2vh;
                     color: #017397;
-                    span{
+
+                    span {
                         font-family: sans-serif;
                     }
                 }
 
-                p{
+                p {
                     font-size: 1.5vh;
                     color: #017397;
                     font-weight: 400;
-                    span{
+
+                    span {
                         font-family: sans-serif;
                     }
                 }
