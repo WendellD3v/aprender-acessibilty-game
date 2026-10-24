@@ -28,7 +28,7 @@ const ranking = [
     { id: "user-27", name: "Lívia", points: 1, avatar: '/avatars/4.png' },
     { id: "user-28", name: "Caio", points: 0, avatar: '/avatars/14.png' },
     { id: "user-29", name: "Eduarda", points: 0, avatar: '/avatars/5.png' },
-    { id: "current-user", name: "Wendell_D3v", points: 0, avatar: '/avatars/15.png' },
+    { id: "current-user", name: "Livia Beatriz", points: 0, avatar: '/avatars/6.png' },
 ];
 
 export function getGeralRanking(){
