@@ -52,7 +52,9 @@ export default function Lobby({playerData, changeScreen}){
                     <h1>Aprender Juntos</h1>
                 </div>
 
-                <div className="game animate__animated animate__flipInX">
+                <div className="game animate__animated animate__flipInX" onClick={() => {
+                    changeScreen('Ranking')
+                }}>
                     <img src={Progress} alt="" />
                     <h1>Meu Progresso</h1>
                 </div>

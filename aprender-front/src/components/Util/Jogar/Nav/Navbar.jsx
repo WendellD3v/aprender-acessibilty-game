@@ -1,8 +1,6 @@
 // CSS
 import './Navbar.css';
 
-// Assets 
-import avatar1 from '../../../../assets/images/avatars/1.png';
 
 export default function Navbar({playerData, changeScreen}) {
     return (
@@ -31,7 +29,7 @@ export default function Navbar({playerData, changeScreen}) {
                 </div>
 
                 <div className="avatar">
-                    <img src={avatar1} alt="Avatar"/>
+                    <img src={playerData.avatar} alt="Avatar"/>
                 </div>
             </div>
         </nav>

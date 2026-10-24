@@ -1,0 +1,119 @@
+section#ranking-section{
+    background-image: url('../../../assets/images/Jogar/menu/menu-background.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    height: 100vh;
+
+    div.content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        padding: 10px 10px;
+        position: relative;
+        gap: 10px;
+
+        .ranking-container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            gap: 5px;
+
+
+            .ranking{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: #FFFFFF;
+                border-radius: 10px;
+                width: 100%;
+                padding: 10px 20px;
+
+                .user{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5px;
+                    .icon img{
+                        width: 3vh;
+                    }
+
+                    .user-info{
+                        h1{
+                            color: #017397;
+                            font-size: 12px;
+                        }
+                        p{
+                            color: #017397;
+                            font-size: 10px;
+                            font-weight: 400;
+                            span{
+                                font-family: sans-serif;
+                            }
+                        }
+                    }
+                }
+
+                .position{
+                    background-color: #FFFFFF;
+                    h1{
+                        font-family: sans-serif;
+                        color: #017397;
+                        font-size: 3vh;
+                    }
+                }
+            }
+        }
+
+        .your-rank{
+            bottom: 0px;
+
+            display: flex;
+            background-color: #ffffff;
+            border-radius: 10px;
+            
+            width: 100%;
+            padding: 10px 20px;
+
+            gap: 10px;
+
+            .icon img{
+                width: 7vh;
+            }
+
+            .user-info{
+                display: flex;
+                flex-direction: column;
+                align-items: left;
+                justify-content: center;
+                gap: 5px;
+                h1{
+                    font-size: 2vh;
+                    color: #017397;
+                    span{
+                        font-family: sans-serif;
+                    }
+                }
+
+                p{
+                    font-size: 1.5vh;
+                    color: #017397;
+                    font-weight: 400;
+                    span{
+                        font-family: sans-serif;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -6,17 +6,18 @@ import Lobby from "../../components/UI/Jogar/lobby/Lobby.jsx";
 import MemoryGame from "../../components/Game/Memory/MemoryGame.jsx";
 import Browser from "../../components/Util/Jogar/Browser/Browser.jsx";
 import ImagesGame from "../../components/Game/Images/ImagesGame.jsx";
+import Ranking from "../../components/Game/Ranking/Ranking.jsx";
 
 // Service
-import { getPlayerPoints, getPlayer } from "../../hooks/points.js";
+import { getPlayer } from "../../hooks/points.js";
 
 // Style
 import './Jogar.css';
 
 export default function Jogar() {
 
-    const [playerdata, setPlayerData] = useState(getPlayerPoints());
-    const [page, setPage] = useState('menu');
+    const [playerdata, setPlayerData] = useState(getPlayer());
+    const [page, setPage] = useState('Ranking');
     const [navAlert, setNavAlert] = useState(false)
 
     useEffect(() => {
@@ -62,6 +63,11 @@ export default function Jogar() {
                 }}/>
             ) : page == 'ImagesGame' ? (
                 <ImagesGame playerData={playerdata} changeScreen={(screen) => {
+                    setPage(screen)
+                    updatePlayerData()
+                }}/>
+            ) : page == 'Ranking' ? (
+                <Ranking playerData={playerdata} changeScreen={(screen) => {
                     setPage(screen)
                     updatePlayerData()
                 }}/>
